@@ -1,0 +1,579 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Serif+Display&display=swap');
+
+
+/* =================================
+   GLOBAL STYLES
+================================= */
+
+:root {
+    --cream: #fff7e9;
+    --ink: #3a1715;
+    --green: #cfe5c5;
+    --gold: #ffdf8c;
+    --line: #4a3028;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 40px;
+}
+
+body {
+    margin: 0;
+    color: var(--ink);
+    background: var(--cream);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+
+/* =================================
+   NAVIGATION
+================================= */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: 30px;
+    background: var(--green);
+    border: 1px solid var(--line);
+}
+
+.nav-bar {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 0 12px;
+}
+
+.nav-link {
+    color: var(--ink);
+    text-decoration: none;
+    font: 10px Georgia, serif;
+    background: #fff8ec;
+    border: 1px solid #d8cbb5;
+    padding: 3px 8px;
+    transition: background 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background: var(--gold);
+}
+
+
+/* =================================
+   LANDING PAGE
+================================= */
+
+.hero {
+    min-height: 330px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 5%;
+    overflow: hidden;
+}
+
+.hero-copy {
+    position: relative;
+    z-index: 2;
+}
+
+.eyebrow {
+    margin: 0 0 -9px;
+    font-size: clamp(17px, 4vw, 24px);
+}
+
+.hero h1 {
+    margin: 0;
+    font: clamp(48px, 10vw, 76px)/.92 'DM Serif Display', Georgia, serif;
+    letter-spacing: -2px;
+}
+
+.roles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 12px;
+    font-size: 12px;
+}
+
+
+/* CHARACTER IMAGE */
+
+.hero-art {
+    width: min(38%, 240px);
+    aspect-ratio: 1 / 1.15;
+    position: relative;
+    margin-right: 3%;
+    display: grid;
+    place-items: center;
+}
+
+.hero-art img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+/* EXPLORE BUTTON */
+
+.explore-button {
+    display: inline-block;
+    margin-top: 22px;
+    padding: 9px 16px;
+    background: var(--gold);
+    border: 1px solid var(--line);
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.explore-button:hover {
+    background: var(--green);
+    transform: translateY(-3px);
+}
+
+
+/* =================================
+   DECORATIVE SPARKLES
+================================= */
+
+.sparkle {
+    position: absolute;
+    color: var(--gold);
+    font-size: 38px;
+}
+
+.sparkle-a {
+    right: 5%;
+    top: 18%;
+}
+
+.sparkle-b {
+    right: 34%;
+    bottom: 4%;
+    font-size: 30px;
+}
+
+.sparkle-c {
+    right: 48%;
+    top: 50%;
+    font-size: 45px;
+}
+
+
+/* =================================
+   ABOUT ME SECTION
+================================= */
+
+.about-page {
+    min-height: 75vh;
+    padding: 0 0 45px;
+    scroll-margin-top: 30px;
+}
+
+.about-heading {
+    min-height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    text-align: center;
+    position: relative;
+
+    background:
+        radial-gradient(circle at 0 50%, transparent 15px, var(--gold) 16px, transparent 17px),
+        radial-gradient(circle at 100% 50%, transparent 15px, var(--gold) 16px, transparent 17px);
+}
+
+.about-heading h2 {
+    font: clamp(40px, 8vw, 58px) 'DM Serif Display', Georgia, serif;
+    margin: 0;
+}
+
+.about-sparkle-left {
+    left: 10%;
+}
+
+.about-sparkle-right {
+    right: 10%;
+}
+
+
+/* ABOUT ME IMAGE AND TEXT */
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 45px;
+    width: min(85%, 950px);
+    margin: 35px auto;
+}
+
+.about-photo {
+    width: 280px;
+    height: 340px;
+    flex-shrink: 0;
+    overflow: hidden;
+    background: var(--gold);
+    border: 1px solid var(--line);
+}
+
+.about-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-description {
+    max-width: 500px;
+}
+
+.about-description h3 {
+    font: 32px 'DM Serif Display', Georgia, serif;
+    margin-top: 0;
+}
+
+.about-description p {
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+
+/* SKILLS */
+
+.skills {
+    margin-top: 30px;
+}
+
+.skills h4 {
+    font: 22px 'DM Serif Display', Georgia, serif;
+}
+
+.skills ul {
+    list-style: none;
+    padding: 0;
+    line-height: 2;
+    font-size: 14px;
+}
+
+.about-bottom-decoration {
+    text-align: center;
+    color: var(--gold);
+    font-size: 35px;
+    margin-top: 35px;
+}
+
+
+/* =================================
+   PROJECTS PAGE
+================================= */
+
+.projects-section {
+    padding: 0 0 55px;
+}
+
+.projects-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    text-align: center;
+    padding: 25px 8px 35px;
+}
+
+.projects-heading h1 {
+    font: clamp(36px, 7vw, 50px) 'DM Serif Display', Georgia, serif;
+    margin: 0;
+}
+
+.projects-heading p {
+    margin: 2px 0 0;
+    font-size: 12px;
+}
+
+.ornament {
+    color: var(--gold);
+    font-size: 28px;
+    white-space: nowrap;
+}
+
+.projects-heading .ornament {
+    font-size: 25px;
+}
+
+.project-list {
+    width: min(88%, 820px);
+    margin: 0 auto;
+}
+
+.project-card {
+    margin: 0 auto 58px;
+}
+
+.project-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 16px;
+}
+
+.project-title h2 {
+    margin: 0;
+    font: 600 clamp(25px, 5vw, 34px)/1.1 'Cormorant Garamond', Georgia, serif;
+}
+
+.project-title p {
+    margin: 3px 0 0;
+    font-size: 12px;
+}
+
+.project-subtitle {
+    font-size: 10px !important;
+}
+
+.small-sparkle {
+    color: var(--gold);
+    font-size: 35px;
+}
+
+
+/* CENTERED PROJECT TITLES */
+
+.project-title.centered {
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.project-title.centered h2 {
+    font-size: clamp(32px, 6vw, 40px);
+}
+
+
+/* =================================
+   PROJECT IMAGES
+================================= */
+
+.image-stack {
+    display: grid;
+    gap: 22px;
+}
+
+.project-image {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    aspect-ratio: 16 / 7;
+    overflow: hidden;
+    background: #eee3d1;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s;
+}
+
+.project-image:hover img {
+    transform: scale(1.025);
+}
+
+
+/* LEPO AND THIRD PROJECT FORMATTING */
+
+.lepo-stack .project-image {
+    aspect-ratio: 16 / 7;
+}
+
+
+/* THIRD PROJECT */
+
+.third-project {
+    padding-top: 10px;
+}
+
+
+/* =================================
+   CONTACT FOOTER
+================================= */
+
+.contact-bar {
+    min-height: 55px;
+    background: var(--green);
+    border: 1px solid var(--line);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    font-size: 11px;
+}
+
+.contact-bar a {
+    color: var(--ink);
+    text-decoration: none;
+}
+
+.contact-bar a:hover {
+    text-decoration: underline;
+}
+
+
+/* =================================
+   TABLET RESPONSIVENESS
+================================= */
+
+@media (max-width: 700px) {
+
+    .hero {
+        min-height: 270px;
+    }
+
+    .hero-art {
+        width: 38%;
+    }
+
+    .about-content {
+        width: 90%;
+        gap: 25px;
+    }
+
+    .about-photo {
+        width: 220px;
+        height: 280px;
+    }
+
+    .about-description h3 {
+        font-size: 25px;
+    }
+
+    .about-description p {
+        font-size: 13px;
+    }
+
+}
+
+
+/* =================================
+   MOBILE RESPONSIVENESS
+================================= */
+
+@media (max-width: 480px) {
+
+    .site-header {
+        height: 32px;
+    }
+
+    .nav-bar {
+        gap: 12px;
+    }
+
+    .nav-link {
+        font-size: 9px;
+        padding: 3px 5px;
+    }
+
+    .hero {
+        min-height: 240px;
+        padding: 30px 5%;
+    }
+
+    .hero-art {
+        width: 39%;
+        margin-right: 0;
+    }
+
+    .hero h1 {
+        font-size: clamp(38px, 11vw, 54px);
+    }
+
+    .roles {
+        gap: 6px;
+        font-size: 9px;
+    }
+
+    .explore-button {
+        font-size: 9px;
+        padding: 7px 10px;
+    }
+
+    .about-heading {
+        min-height: 100px;
+    }
+
+    .about-heading h2 {
+        font-size: 37px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .about-photo {
+        width: 210px;
+        height: 250px;
+    }
+
+    .about-description {
+        width: 100%;
+    }
+
+    .about-description h3 {
+        font-size: 27px;
+    }
+
+    .skills ul {
+        display: inline-block;
+        text-align: left;
+    }
+
+    .projects-heading {
+        gap: 5px;
+        padding: 20px 5px 30px;
+    }
+
+    .projects-heading .ornament {
+        font-size: 16px;
+    }
+
+    .projects-heading h1 {
+        font-size: 34px;
+    }
+
+    .project-list {
+        width: calc(100% - 38px);
+    }
+
+    .image-stack {
+        gap: 16px;
+    }
+
+    .project-title p {
+        font-size: 10px;
+    }
+
+    .contact-bar {
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 9px;
+    }
+
+}
